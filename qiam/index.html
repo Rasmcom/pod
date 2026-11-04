@@ -1,0 +1,343 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ملف ترسيخ القيم ١٤٤٨</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: navy masthead → section chips → one portrait A4 page with an RTL page-turn and a zoom view → thumbnails → what's in the file */
+:root {
+  --navy: #0B3144;
+  --teal: #1E8C73;
+  --mint: #2FC28F;
+  --gold: #C9A227;
+  --bg: #EEF4F3;
+  --surface: #FFFFFF;
+  --fg: #12303D;
+  --muted: #557080;
+  --line: #CFE0E2;
+  --chip: #E3EFEE;
+  --shade: rgba(4, 22, 31, .88);
+  --shadow: 0 22px 44px -20px rgba(11, 49, 68, .5);
+  --display: "Cairo", "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  --body: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #061A22; --surface: #0D2731; --fg: #E3EFEF; --muted: #9CB7BF;
+    --line: #1D4250; --chip: #12343F; --teal: #4CC2A6; --mint: #49D3A1;
+    --shadow: 0 22px 44px -20px rgba(0, 0, 0, .75); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #061A22; --surface: #0D2731; --fg: #E3EFEF; --muted: #9CB7BF;
+  --line: #1D4250; --chip: #12343F; --teal: #4CC2A6; --mint: #49D3A1;
+  --shadow: 0 22px 44px -20px rgba(0, 0, 0, .75); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { direction: rtl; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.7; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.mast { background: var(--navy); color: #fff; position: relative; }
+.mast::after { content: ""; position: absolute; inset: auto 0 0 0; height: 5px; background: linear-gradient(to left, #08A86A, #3D7DBA); }
+.mast .wrap { padding-block: 22px 28px; display: flex; gap: 20px; align-items: center; }
+.mast img { width: 46px; height: auto; flex: none; }
+.mast h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.4rem, 1rem + 2vw, 2.3rem); line-height: 1.3; margin: 0; text-wrap: balance; }
+.mast p { margin: 4px 0 0; color: #BFD9E0; font-size: 1rem; }
+.mast .year { color: #6FE0B6; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 22px 12px; }
+.chips button { font: 700 .98rem var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
+.chips button small { font-weight: 500; color: var(--muted); font-variant-numeric: tabular-nums; }
+.chips button:hover { border-color: var(--teal); }
+.chips button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+.chips button[aria-pressed="true"] small { color: #BFD9E0; }
+:root[data-theme="dark"] .chips button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #04161F; }
+:root[data-theme="dark"] .chips button[aria-pressed="true"] small { color: #04342A; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .chips button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #04161F; }
+  :root:not([data-theme="light"]) .chips button[aria-pressed="true"] small { color: #04342A; }
+}
+button:focus-visible, .thumb:focus-visible { outline: 3px solid var(--mint); outline-offset: 2px; }
+
+.viewer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 330px); gap: 28px; align-items: start; padding-block: 8px 0; }
+.book { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; }
+.stage { position: relative; width: min(100%, 620px, calc(84vh * 1100 / 1556)); margin-inline: auto; aspect-ratio: 1100 / 1556; perspective: 2400px; border-radius: 6px; background: #fff; box-shadow: var(--shadow); touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.leaf { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: #fff; transform-origin: right center; backface-visibility: hidden; will-change: transform; }
+.leaf img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; -webkit-user-drag: none; }
+.leaf::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to left, rgba(11,49,68,.10), transparent 5%); }
+.zoombtn { position: absolute; inset: auto auto 12px 12px; z-index: 2; display: inline-flex; gap: 6px; align-items: center; font: 700 .9rem var(--body); color: #fff; background: rgba(11, 49, 68, .86); border: 0; border-radius: 999px; padding: 6px 14px 7px; cursor: pointer; }
+.zoombtn svg { width: 16px; height: 16px; }
+.nav { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); display: grid; place-items: center; cursor: pointer; }
+.nav:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+.nav:disabled { opacity: .35; cursor: default; }
+.nav svg { width: 22px; height: 22px; }
+.navrow { display: none; justify-content: space-between; gap: 12px; padding-top: 10px; }
+
+.info { display: grid; gap: 14px; align-content: start; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); }
+.now { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 4px; }
+.now .sec { font-size: .85rem; color: var(--muted); }
+.now h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.25rem; line-height: 1.45; text-wrap: balance; }
+.now p { margin: 0; color: var(--fg); font-size: .98rem; }
+.now .count { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: .9rem; font-variant-numeric: tabular-nums; padding-top: 6px; border-top: 1px dashed var(--line); margin-top: 6px; }
+.cta { display: inline-flex; justify-content: center; align-items: center; gap: 8px; text-decoration: none; background: var(--mint); color: #04221A; font: 800 1.05rem var(--display); border-radius: 10px; padding: 12px 18px; }
+.cta[hidden] { display: none; }
+.note { font-size: .85rem; color: var(--muted); margin: 0; }
+
+.thumbs { display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); gap: 10px; padding-block: 22px 4px; }
+.thumb { position: relative; border: 2px solid transparent; border-radius: 5px; padding: 0; background: #fff; cursor: pointer; overflow: hidden; aspect-ratio: 1100 / 1556; max-width: 100%; box-shadow: 0 4px 12px -8px rgba(11,49,68,.6); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb[aria-current="true"] { border-color: var(--teal); }
+
+.details { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; padding-block: 34px 48px; }
+.details h2 { font-family: var(--display); font-weight: 800; font-size: 1.35rem; margin: 0 0 10px; text-wrap: balance; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.facts li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.facts li:last-child { border-bottom: 0; }
+.facts b { font-weight: 700; color: var(--teal); }
+.side { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+.side h3 { margin: 0; font-family: var(--display); font-size: 1.05rem; }
+.kv { display: grid; gap: 8px; margin: 0; }
+.kv div { display: flex; justify-content: space-between; gap: 12px; font-size: .95rem; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.kv div:last-child { border-bottom: 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-weight: 700; text-align: left; font-variant-numeric: tabular-nums; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 18px; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+
+/* zoom view */
+.zoom { position: fixed; inset: 0; z-index: 50; background: var(--shade); display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.zoom[hidden] { display: none; }
+.zoom .bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #fff; padding: calc(env(safe-area-inset-top, 0px) + 10px) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); }
+.zoom .bar b { font-family: var(--display); font-size: 1rem; }
+.zoom .bar .ctl { display: flex; gap: 8px; }
+.zoom .bar button { font: 700 .95rem var(--body); color: #fff; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.zoom .scroll { overflow: auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 24px) max(16px, env(safe-area-inset-left, 0px)); -webkit-overflow-scrolling: touch; }
+.zoom .scroll img { display: block; margin: 0 auto; width: min(100%, 900px); max-width: none; height: auto; border-radius: 4px; background: #fff; cursor: zoom-in; }
+.zoom.big .scroll img { width: 1600px; cursor: zoom-out; }
+
+@media (max-width: 900px) {
+  .viewer { grid-template-columns: minmax(0, 1fr); }
+  .info { position: static; }
+  .thumbs { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .details { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .book { grid-template-columns: minmax(0, 1fr); }
+  .book .nav { display: none; }
+  .navrow { display: flex; }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .thumbs { gap: 6px; }
+  .mast img { width: 36px; }
+}
+</style>
+
+<header class="mast">
+  <div class="wrap">
+    <img src="rasm.png" alt="رسم للتصميم والخدمات التعليمية" width="46" height="89">
+    <div>
+      <h1>ملف مشروع ترسيخ القيم وتعزيز الهوية الوطنية</h1>
+      <p>ملف المدرسة <span class="year">١٤٤٨هـ</span> · تصفح ٢٠ صفحة مختارة من الملف قبل الشراء</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <nav class="chips" id="chips" aria-label="أقسام المعاينة"></nav>
+
+  <section class="viewer" aria-label="معاينة الصفحات">
+    <div>
+      <div class="book">
+        <button class="nav" id="prev" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="stage" id="stage" aria-live="polite">
+          <button class="zoombtn" id="zoomOpen" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5"/></svg>تكبير</button>
+        </div>
+        <button class="nav" id="next" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      </div>
+      <div class="navrow">
+        <button class="nav" id="prev2" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <button class="nav" id="next2" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      </div>
+    </div>
+    <aside class="info">
+      <div class="now">
+        <span class="sec" id="secName"></span>
+        <h2 id="pageTitle"></h2>
+        <p id="pageNote"></p>
+        <div class="count"><span id="pageCount"></span><span id="pageReal"></span></div>
+      </div>
+      <a class="cta" id="buy" href="#" target="_blank" rel="noopener" hidden>اطلب الملف من المتجر</a>
+      <p class="note">الصفحات المعروضة نموذج عليه علامة مائية، والملف الكامل يصلك بصيغة Word قابلًا للتعديل وبلا علامة.</p>
+    </aside>
+  </section>
+
+  <div class="thumbs" id="thumbs"></div>
+
+  <section class="details">
+    <div>
+      <h2>ما يصلك بعد الشراء</h2>
+      <ul class="facts">
+        <li><b>الملف</b><span>ملف Word واحد قابل للتعديل، في ٩٦ صفحة بهوية وزارة التعليم، وغلاف تكتب فيه اسم المدرسة والإدارة.</span></li>
+        <li><b>المراحل</b><span>يصلح لكل المراحل من الطفولة المبكرة إلى الثانوي، ومشروع «قيمنا حياة» موجّه للسادس الابتدائي والثالث المتوسط والثاني الثانوي.</span></li>
+        <li><b>المبادرات</b><span>بطاقة لكل مبادرة من المبادرات الاثنتي عشرة: النبذة والقيم والفئة والمخرجات، وإجراءات التنفيذ والمتابعة في المدرسة.</span></li>
+        <li><b>الاجتماعات</b><span>قرار تشكيل فريق العمل واللجان، وتسعة محاضر مكتوبة بجداول أعمالها وقراراتها وتوصياتها، وسجل سنوي للقاءات.</span></li>
+        <li><b>التقارير</b><span>تقارير شهرية وفصلية وختامية معبأة بنماذج قابلة للتعديل، مع أدوات الرصد والمتابعة والتقويم الزمني للاستحقاقات.</span></li>
+      </ul>
+    </div>
+    <aside class="side" aria-labelledby="factsTitle">
+      <h3 id="factsTitle">بيانات الملف</h3>
+      <dl class="kv">
+        <div><dt>الصيغة</dt><dd>Word (.docx)</dd></div>
+        <div><dt>عدد الصفحات</dt><dd id="totalPages">٩٦ صفحة</dd></div>
+        <div><dt>العام الدراسي</dt><dd>١٤٤٨هـ</dd></div>
+        <div><dt>القيم</dt><dd>القيم الست</dd></div>
+        <div><dt>الخط</dt><dd>Helvetica Neue W23</dd></div>
+      </dl>
+      <a class="cta" id="buy2" href="#" target="_blank" rel="noopener" hidden>اطلب الملف من المتجر</a>
+    </aside>
+  </section>
+</main>
+
+<div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-labelledby="zoomTitle">
+  <div class="bar"><b id="zoomTitle"></b><div class="ctl"><button type="button" id="zoomPrev">السابقة</button><button type="button" id="zoomNext">التالية</button><button type="button" id="zoomClose">إغلاق</button></div></div>
+  <div class="scroll" id="zoomScroll"><img id="zoomImg" alt=""></div>
+</div>
+
+<footer>
+  <div class="wrap"><span>رسم للتصميم والخدمات التعليمية</span><span>ملف مشروع ترسيخ القيم وتعزيز الهوية الوطنية · ١٤٤٨هـ</span></div>
+</footer>
+
+<script>
+(function () {
+  var STORE_URL = "https://rasmcom.com/ملف-مشروع-ترسيخ-القيم-وتعزيز-الهوية-الوطنية-1448/p1511615391";
+  var PAGES = [{"sec": "content", "real": 1, "title": "الغلاف", "note": "غلاف بالقيم الست ومبادرات 1448هـ، تكتب فيه اسم المدرسة والإدارة والمنسق والمدير."}, {"sec": "content", "real": 4, "title": "الفهرس", "note": "فهرس بأرقام الصفحات لكل أقسام الملف."}, {"sec": "content", "real": 6, "title": "المقدمة", "note": "مقدمة مكتوبة باسم المدرسة عن المشروع وأهدافه ومنهجية العمل."}, {"sec": "content", "real": 9, "title": "التعريف بالمشروع وتوجهه الاستراتيجي", "note": "تعريف المشروع وهدفه والمؤشر الاستراتيجي ومجالات التركيز والفئات المستهدفة."}, {"sec": "content", "real": 11, "title": "القيم المستهدفة", "note": "القيم الست ومكوناتها المعرفية والوجدانية والسلوكية."}, {"sec": "inits", "real": 15, "title": "مبادرات المشروع للعام 1448هـ", "note": "جدول المبادرات الاثنتي عشرة: المجموعة والنوع والجهة المشرفة والمسؤول في المدرسة."}, {"sec": "inits", "real": 16, "title": "الفئات المستهدفة حسب المرحلة والصف", "note": "ما ينطبق على كل مرحلة وصف، مع توضيح فئة «قيمنا حياة»."}, {"sec": "inits", "real": 18, "title": "بطاقات المبادرات", "note": "بطاقة لكل مبادرة: النبذة والقيم والفئة والمخرجات، ثم إجراءات التنفيذ والمتابعة."}, {"sec": "inits", "real": 21, "title": "بطاقات المبادرات", "note": "مبادرات 1448هـ ببطاقات جاهزة للتنفيذ والمتابعة في المدرسة."}, {"sec": "inits", "real": 44, "title": "دليل تشغيل «قيمنا حياة»", "note": "دليل تشغيل المبادرة في المدرسة: المراحل والأدوار والمجموعات والتقويم."}, {"sec": "meet", "real": 30, "title": "التقويم الزمني للتقارير واللقاءات", "note": "مواعيد التقارير واللقاءات بالتاريخين الميلادي والهجري، مع خانة إنجاز لكل استحقاق."}, {"sec": "meet", "real": 32, "title": "قرار تشكيل فريق العمل", "note": "قرار تشكيل فريق المشروع بالمهام والأعضاء، جاهز للتوقيع والاعتماد."}, {"sec": "meet", "real": 34, "title": "محضر الاجتماع التأسيسي", "note": "محضر مكتوب: جدول الأعمال وما نوقش والقرارات والتوصيات وجدول الحضور."}, {"sec": "meet", "real": 36, "title": "محضر اللقاء الشهري الأول", "note": "محضر متابعة شهري مكتوب، ضمن تسعة محاضر تغطي العام كاملًا."}, {"sec": "meet", "real": 43, "title": "سجل الاجتماعات السنوي", "note": "سجل اللقاءات التسعة بمواعيدها المخططة والفعلية وعدد الحضور."}, {"sec": "reports", "real": 70, "title": "بطاقات التقييم", "note": "بطاقة تقييم الممارسات (40 درجة) وبطاقة تقييم المخرجات (60 درجة)."}, {"sec": "reports", "real": 74, "title": "التقرير الشهري الأول", "note": "تقرير شهري معبأ بالإنجازات والمؤشرات والتحديات وخطة الشهر القادم."}, {"sec": "reports", "real": 78, "title": "التقرير الفصلي الأول", "note": "تقرير نهاية الفصل الأول بالمؤشرات والممارسات المتميزة والتوصيات."}, {"sec": "reports", "real": 86, "title": "التقرير الختامي", "note": "التقرير الختامي للعام: الأثر والمؤشرات والدروس المستفادة."}, {"sec": "reports", "real": 94, "title": "لوحة المؤشرات وقائمة تحقق المنسق", "note": "لوحة مؤشرات المدرسة وقائمة تحقق شهرية لمنسق المشروع."}];
+  var SECTIONS = {"content": {"name": "المحتوى والتعريف"}, "inits": {"name": "المبادرات والبطاقات"}, "meet": {"name": "الاجتماعات والمحاضر"}, "reports": {"name": "التقارير والمتابعة"}};
+  var TOTAL_FILE = 96;
+
+  var AR = function (v) { return String(v).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); };
+  var TOTAL = PAGES.length;
+  var cur = 1, busy = false;
+  var stage = document.getElementById("stage");
+  var thumbs = document.getElementById("thumbs");
+  var chips = document.getElementById("chips");
+  var zoom = document.getElementById("zoom");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function src(n, small) { var k = (n < 10 ? "0" : "") + n; return (small ? "t/" : "p/") + k + ".jpg"; }
+  function page(n) { return PAGES[n - 1]; }
+
+  function leaf(n) {
+    var el = document.createElement("div");
+    el.className = "leaf";
+    var img = document.createElement("img");
+    img.src = src(n); img.alt = page(n).title; img.draggable = false;
+    el.appendChild(img);
+    return el;
+  }
+
+  function renderMeta() {
+    var p = page(cur);
+    document.getElementById("secName").textContent = SECTIONS[p.sec].name;
+    document.getElementById("pageTitle").textContent = p.title;
+    document.getElementById("pageNote").textContent = p.note;
+    document.getElementById("pageCount").textContent = "المعاينة " + AR(cur) + " من " + AR(TOTAL);
+    document.getElementById("pageReal").textContent = "صفحة " + AR(p.real) + " في الملف";
+    ["prev", "prev2"].forEach(function (id) { document.getElementById(id).disabled = cur === 1; });
+    ["next", "next2"].forEach(function (id) { document.getElementById(id).disabled = cur === TOTAL; });
+    Array.prototype.forEach.call(thumbs.children, function (t, i) { t.setAttribute("aria-current", String(i + 1 === cur)); });
+    Array.prototype.forEach.call(chips.children, function (c) { c.setAttribute("aria-pressed", String(c.dataset.sec === p.sec)); });
+    if (!zoom.hidden) fillZoom();
+  }
+
+  function go(n) {
+    if (busy || n === cur || n < 1 || n > TOTAL) return;
+    var forward = n > cur;
+    var current = stage.querySelector(".leaf");
+    var incoming = leaf(n);
+    cur = n;
+    if (reduce || !current || !current.animate || !zoom.hidden) {
+      if (current) current.remove();
+      stage.insertBefore(incoming, stage.firstChild); renderMeta(); return;
+    }
+    busy = true;
+    if (forward) {
+      stage.insertBefore(incoming, current);
+      var a = current.animate([{ transform: "rotateY(0deg)", filter: "brightness(1)" }, { transform: "rotateY(100deg)", filter: "brightness(.75)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      a.onfinish = function () { current.remove(); busy = false; };
+    } else {
+      current.after(incoming);
+      var b = incoming.animate([{ transform: "rotateY(100deg)", filter: "brightness(.75)" }, { transform: "rotateY(0deg)", filter: "brightness(1)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      b.onfinish = function () { current.remove(); busy = false; };
+    }
+    renderMeta();
+  }
+
+  function fillZoom() {
+    var p = page(cur);
+    document.getElementById("zoomTitle").textContent = p.title + " · " + AR(cur) + " / " + AR(TOTAL);
+    var im = document.getElementById("zoomImg");
+    im.src = src(cur); im.alt = p.title;
+    document.getElementById("zoomPrev").disabled = cur === 1;
+    document.getElementById("zoomNext").disabled = cur === TOTAL;
+    document.getElementById("zoomScroll").scrollTop = 0;
+  }
+  function openZoom() { zoom.hidden = false; zoom.classList.remove("big"); fillZoom(); document.getElementById("zoomClose").focus(); }
+  function closeZoom() { zoom.hidden = true; document.getElementById("zoomOpen").focus(); }
+
+  // section chips
+  Object.keys(SECTIONS).forEach(function (k) {
+    var b = document.createElement("button");
+    b.type = "button"; b.dataset.sec = k; b.id = "sec-" + k;
+    var count = PAGES.filter(function (p) { return p.sec === k; }).length;
+    b.innerHTML = SECTIONS[k].name + " <small>" + AR(count) + "</small>";
+    b.addEventListener("click", function () {
+      for (var i = 0; i < PAGES.length; i++) if (PAGES[i].sec === k) { go(i + 1); break; }
+    });
+    chips.appendChild(b);
+  });
+
+  // thumbnails
+  for (var n = 1; n <= TOTAL; n++) {
+    var t = document.createElement("button");
+    t.type = "button"; t.className = "thumb"; t.id = "thumb-" + n;
+    t.setAttribute("aria-label", page(n).title);
+    t.innerHTML = '<img loading="lazy" alt="" draggable="false" src="' + src(n, true) + '">';
+    (function (k) { t.addEventListener("click", function () { go(k); }); })(n);
+    thumbs.appendChild(t);
+  }
+
+  stage.insertBefore(leaf(1), stage.firstChild);
+  renderMeta();
+  document.getElementById("totalPages").textContent = AR(TOTAL_FILE) + " صفحة";
+
+  ["next", "next2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(cur + 1); }); });
+  ["prev", "prev2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(cur - 1); }); });
+  document.getElementById("zoomOpen").addEventListener("click", openZoom);
+  document.getElementById("zoomClose").addEventListener("click", closeZoom);
+  document.getElementById("zoomNext").addEventListener("click", function () { go(cur + 1); });
+  document.getElementById("zoomPrev").addEventListener("click", function () { go(cur - 1); });
+  document.getElementById("zoomImg").addEventListener("click", function () { zoom.classList.toggle("big"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !zoom.hidden) closeZoom();
+    if (e.key === "ArrowLeft") go(cur + 1);
+    if (e.key === "ArrowRight") go(cur - 1);
+  });
+  // swipe: left-to-right turns to the next page (Arabic book direction)
+  var x0 = null;
+  stage.addEventListener("pointerdown", function (e) { if (e.target.closest(".zoombtn")) return; x0 = e.clientX; });
+  stage.addEventListener("pointerup", function (e) {
+    if (x0 === null) return;
+    var dx = e.clientX - x0; x0 = null;
+    if (dx > 40) go(cur + 1); else if (dx < -40) go(cur - 1);
+  });
+  stage.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  thumbs.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  zoom.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+
+  if (STORE_URL) ["buy", "buy2"].forEach(function (id) { var a = document.getElementById(id); a.href = STORE_URL; a.hidden = false; });
+  for (var p = 2; p <= Math.min(4, TOTAL); p++) { var im = new Image(); im.src = src(p); }
+})();
+</script>
+
+</body></html>
