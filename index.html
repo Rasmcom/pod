@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>[hidden]{display:none!important}body{margin:0}img{max-width:100%}</style>
+<title>جدول الإذاعة المدرسية ١٤٤٨</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: navy masthead band → selectors → single landscape page "book" with an RTL page-turn → thumbnails → what's inside */
+:root {
+  --navy: #0B3144;      /* هوية الملفات: الشريط الكحلي */
+  --teal: #1E9691;      /* العناوين الفرعية */
+  --mint: #2FC28F;      /* سنة الغلاف والوسوم */
+  --plum: #453973;      /* طرف الشريط المتدرج */
+  --bg: #EEF4F6;
+  --surface: #FFFFFF;
+  --fg: #12303D;
+  --muted: #557080;
+  --line: #CFE0E5;
+  --chip: #E3EFF2;
+  --band-fg: #FFFFFF;
+  --shadow: 0 18px 40px -18px rgba(11, 49, 68, .45);
+  --display: "Cairo", "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  --body: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #061923; --surface: #0D2633; --fg: #E4EFF2; --muted: #9DB6C1;
+    --line: #1D4152; --chip: #123445; --teal: #4FC3BD; --mint: #49D3A1;
+    --shadow: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #061923; --surface: #0D2633; --fg: #E4EFF2; --muted: #9DB6C1;
+  --line: #1D4152; --chip: #123445; --teal: #4FC3BD; --mint: #49D3A1;
+  --shadow: 0 18px 40px -18px rgba(0, 0, 0, .7); color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { direction: rtl; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.7; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* masthead */
+.mast { background: var(--navy); color: var(--band-fg); position: relative; }
+.mast::after { content: ""; position: absolute; inset: auto 0 0 0; height: 5px; background: linear-gradient(to left, #005464, #1f486a 55%, #453973); }
+.mast .wrap { padding-block: 22px 28px; display: flex; gap: 20px; align-items: center; }
+.mast img { width: 46px; height: auto; flex: none; }
+.mast h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.5rem, 1.1rem + 2vw, 2.4rem); line-height: 1.25; margin: 0; text-wrap: balance; }
+.mast p { margin: 4px 0 0; color: #BFD9E0; font-size: 1rem; }
+.mast .year { color: #6FE0B6; }
+
+/* selectors */
+.pickers { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: end; padding-block: 22px 10px; }
+.group { display: grid; gap: 6px; min-width: 0; }
+.group > span { font-size: .82rem; color: var(--muted); letter-spacing: .02em; }
+.seg { display: flex; flex-wrap: wrap; gap: 6px; }
+.seg button { font: 700 .98rem var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; cursor: pointer; transition: background .15s, color .15s, border-color .15s; }
+.seg button:hover { border-color: var(--teal); }
+.seg button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; }
+:root[data-theme="dark"] .seg button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #04161F; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .seg button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #04161F; } }
+button:focus-visible, .thumb:focus-visible { outline: 3px solid var(--mint); outline-offset: 2px; }
+
+/* book */
+.book { margin-block: 8px 0; display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: center; }
+.stage { position: relative; width: 100%; aspect-ratio: 1400 / 990; max-width: 100%; perspective: 2200px; border-radius: 6px; background: var(--surface); box-shadow: var(--shadow); touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.stage .leaf { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: #fff; transform-origin: right center; backface-visibility: hidden; will-change: transform; }
+.stage .leaf img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; -webkit-user-drag: none; }
+.stage .leaf::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to left, rgba(11,49,68,.10), transparent 6%); }
+.lock { position: absolute; inset: 0; display: grid; place-content: center; justify-items: center; gap: 10px; text-align: center; padding: 16px; }
+.lock .badge { background: rgba(11, 49, 68, .92); color: #fff; border-radius: 14px; padding: 16px 22px; display: grid; justify-items: center; gap: 6px; max-width: 30ch; box-shadow: 0 10px 30px -10px rgba(0,0,0,.5); }
+.lock svg { width: 30px; height: 30px; color: #6FE0B6; }
+.lock strong { font-family: var(--display); font-size: 1.12rem; }
+.lock small { color: #CDE3E9; font-size: .9rem; }
+.nav { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); display: grid; place-items: center; cursor: pointer; }
+.nav:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+.nav:disabled { opacity: .35; cursor: default; }
+.nav svg { width: 22px; height: 22px; }
+.meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding-block: 12px 6px; font-size: .95rem; }
+.meta b { font-family: var(--display); font-weight: 700; color: var(--teal); }
+.meta span { color: var(--muted); font-variant-numeric: tabular-nums; }
+
+/* thumbnails */
+.thumbs { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; padding-block: 6px 4px; }
+.thumb { position: relative; border: 2px solid transparent; border-radius: 6px; padding: 0; background: var(--surface); cursor: pointer; overflow: hidden; aspect-ratio: 1400 / 990; max-width: 100%; box-shadow: 0 4px 12px -8px rgba(11,49,68,.6); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb[aria-current="true"] { border-color: var(--teal); }
+.thumb .ico { position: absolute; inset: auto 6px 6px auto; width: 22px; height: 22px; border-radius: 50%; background: rgba(11,49,68,.9); color: #6FE0B6; display: grid; place-items: center; }
+.thumb .ico svg { width: 13px; height: 13px; }
+
+/* details */
+.details { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; padding-block: 34px 48px; }
+.details h2 { font-family: var(--display); font-weight: 800; font-size: 1.35rem; margin: 0 0 10px; text-wrap: balance; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.facts li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.facts li:last-child { border-bottom: 0; }
+.facts b { font-weight: 700; color: var(--teal); }
+.side { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+.side h3 { margin: 0; font-family: var(--display); font-size: 1.05rem; }
+.cal { display: grid; gap: 8px; margin: 0; }
+.cal div { display: flex; justify-content: space-between; gap: 12px; font-size: .95rem; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.cal div:last-child { border-bottom: 0; }
+.cal dt { color: var(--muted); }
+.cal dd { margin: 0; font-weight: 700; font-variant-numeric: tabular-nums; text-align: left; }
+.cta { display: inline-flex; justify-content: center; align-items: center; gap: 8px; text-decoration: none; background: var(--mint); color: #04221A; font: 800 1.05rem var(--display); border-radius: 10px; padding: 12px 18px; }
+.cta[hidden] { display: none; }
+.note { font-size: .85rem; color: var(--muted); margin: 0; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 18px; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+
+@media (max-width: 760px) {
+  .book { grid-template-columns: minmax(0, 1fr); }
+  .book .nav { display: none; }
+  .navrow { display: flex !important; }
+  .details { grid-template-columns: minmax(0, 1fr); }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .thumbs { gap: 6px; }
+  .mast img { width: 36px; }
+}
+.navrow { display: none; justify-content: space-between; gap: 12px; padding-top: 10px; }
+@media (prefers-reduced-motion: reduce) { .seg button { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <img src="rasm.png" alt="رسم للتصميم والخدمات التعليمية" width="46" height="89">
+    <div>
+      <h1>جدول الإذاعة المدرسية</h1>
+      <p>الفصل الدراسي الأول <span class="year">١٤٤٨هـ</span> · تصفح نموذجًا قبل الشراء</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="pickers" aria-label="اختيار النسخة">
+    <div class="group">
+      <span id="lbl-stage">المرحلة</span>
+      <div class="seg" role="group" aria-labelledby="lbl-stage" id="stages">
+        <button type="button" id="st-initial" data-stage="initial">الأولية</button>
+        <button type="button" id="st-upper" data-stage="upper">العليا</button>
+        <button type="button" id="st-middle" data-stage="middle">المتوسطة</button>
+        <button type="button" id="st-secondary" data-stage="secondary">الثانوية</button>
+      </div>
+    </div>
+    <div class="group">
+      <span id="lbl-region">التقويم</span>
+      <div class="seg" role="group" aria-labelledby="lbl-region" id="regions">
+        <button type="button" id="rg-western" data-region="western">المنطقة الغربية</button>
+        <button type="button" id="rg-other" data-region="other">بقية المناطق</button>
+      </div>
+    </div>
+  </section>
+
+  <section aria-label="معاينة الصفحات">
+    <div class="book">
+      <button class="nav" id="prev" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <div class="stage" id="stage" aria-live="polite"></div>
+      <button class="nav" id="next" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    </div>
+    <div class="navrow">
+      <button class="nav" id="prev2" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+      <button class="nav" id="next2" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+    </div>
+    <div class="meta"><b id="pageName">الغلاف</b><span id="pageCount">الصفحة ١ من ٥</span></div>
+    <div class="thumbs" id="thumbs"></div>
+  </section>
+
+  <section class="details">
+    <div>
+      <h2>ما يصلك بعد الشراء</h2>
+      <ul class="facts">
+        <li><b>الملفات</b><span>Word قابل للتعديل، وPDF جاهز للطباعة، لكل مرحلة ملف مستقل.</span></li>
+        <li><b>المراحل</b><span>الصفوف الأولية، والصفوف العليا، والمرحلة المتوسطة، والمرحلة الثانوية.</span></li>
+        <li><b>العناوين</b><span>عنوان الإذاعة لكل يوم من أدلة برامج الحضور والاصطفاف الصباحي ١٤٤٨هـ.</span></li>
+        <li><b>التواريخ</b><span>تاريخ هجري لكل يوم بالأرقام العربية، مع إجازة اليوم الوطني والإجازات الإضافية وإجازة الخريف وأسبوع الاختبارات.</span></li>
+        <li><b>للتعبئة</b><span>خانات فارغة للجهة المنفذة والمعلمة المسؤولة والتوقيع، وغلاف بهوية وزارة التعليم تكتب فيه اسم المدرسة وإدارتها.</span></li>
+      </ul>
+    </div>
+    <aside class="side" aria-labelledby="calTitle">
+      <h3 id="calTitle">تقويم النسخة المعروضة</h3>
+      <dl class="cal" id="cal"></dl>
+      <a class="cta" id="buy" href="#" target="_blank" rel="noopener" hidden>اطلب الملفات من المتجر</a>
+      <p class="note">الصفحات المعروضة نموذج عليه علامة مائية، والنسخة الكاملة بلا علامة.</p>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap"><span>رسم للتصميم والخدمات التعليمية</span><span>جدول الإذاعة المدرسية · الفصل الدراسي الأول ١٤٤٨هـ</span></div>
+</footer>
+
+<script>
+(function () {
+  // رابط المنتج في سلة — ضعه هنا ليظهر زر الطلب
+  var STORE_URL = "https://rasmcom.com/جدول-الإذاعة-المدرسية-١٤٤٨هـ-الفصل-الأول-word-وpdf/p1520000968";
+
+  var AR = function (v) { return String(v).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); };
+  var REGIONS = {
+    western: { name: "المنطقة الغربية", weeks: 18, start: "الأحد ١٧ / ٣ / ١٤٤٨هـ", ranges: ["١–٥", "٦–١٠", "١١–١٥", "١٦–١٨"], extra: "الأحد ١٤ / ٥" },
+    other: { name: "بقية المناطق", weeks: 19, start: "الأحد ١٠ / ٣ / ١٤٤٨هـ", ranges: ["١–٥", "٦–١٠", "١١–١٥", "١٦–١٩"], extra: "الأحد ١٤ / ٥ والأحد ١٩ / ٦" }
+  };
+  var STAGES = { initial: "الصفوف الأولية", upper: "الصفوف العليا", middle: "المرحلة المتوسطة", secondary: "المرحلة الثانوية" };
+  var OPEN = 2; // الغلاف + أول صفحة جدول مفتوحتان، والباقي مقفل
+  var TOTAL = 5;
+  var LOCK_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10.5" width="16" height="10" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg>';
+
+  var state = { stage: "middle", region: "western", page: 1 };
+  var stage = document.getElementById("stage");
+  var thumbs = document.getElementById("thumbs");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var busy = false;
+
+  function src(n) { return "p/" + state.stage + "-" + state.region + "-" + n + ".jpg"; }
+  function label(n) { return n === 1 ? "الغلاف" : "الأسابيع " + REGIONS[state.region].ranges[n - 2]; }
+
+  function leaf(n) {
+    var el = document.createElement("div");
+    el.className = "leaf";
+    var img = document.createElement("img");
+    img.src = src(n); img.alt = STAGES[state.stage] + " — " + label(n); img.draggable = false;
+    el.appendChild(img);
+    if (n > OPEN) {
+      var l = document.createElement("div");
+      l.className = "lock";
+      l.innerHTML = '<div class="badge">' + LOCK_SVG + "<strong>صفحة " + label(n) + "</strong><small>متاحة كاملة في ملفات Word وPDF بعد الشراء</small></div>";
+      el.appendChild(l);
+    }
+    return el;
+  }
+
+  function renderMeta() {
+    document.getElementById("pageName").textContent = label(state.page);
+    document.getElementById("pageCount").textContent = "الصفحة " + AR(state.page) + " من " + AR(TOTAL);
+    ["prev", "prev2"].forEach(function (id) { document.getElementById(id).disabled = state.page === 1; });
+    ["next", "next2"].forEach(function (id) { document.getElementById(id).disabled = state.page === TOTAL; });
+    Array.prototype.forEach.call(thumbs.children, function (t, i) { t.setAttribute("aria-current", String(i + 1 === state.page)); });
+  }
+
+  function renderAll() {
+    stage.innerHTML = "";
+    stage.appendChild(leaf(state.page));
+    thumbs.innerHTML = "";
+    for (var n = 1; n <= TOTAL; n++) {
+      var b = document.createElement("button");
+      b.type = "button"; b.className = "thumb"; b.id = "thumb-" + n;
+      b.setAttribute("aria-label", label(n));
+      b.innerHTML = '<img loading="lazy" alt="" draggable="false" src="' + src(n) + '">' + (n > OPEN ? '<span class="ico">' + LOCK_SVG + "</span>" : "");
+      (function (k) { b.addEventListener("click", function () { go(k); }); })(n);
+      thumbs.appendChild(b);
+    }
+    document.querySelectorAll("#stages button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.stage === state.stage)); });
+    document.querySelectorAll("#regions button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.dataset.region === state.region)); });
+    var r = REGIONS[state.region];
+    document.getElementById("cal").innerHTML =
+      "<div><dt>النسخة</dt><dd>" + STAGES[state.stage] + "</dd></div>" +
+      "<div><dt>التقويم</dt><dd>" + r.name + "</dd></div>" +
+      "<div><dt>عدد الأسابيع</dt><dd>" + AR(r.weeks) + " أسبوعًا</dd></div>" +
+      "<div><dt>بداية الدراسة</dt><dd>" + r.start + "</dd></div>" +
+      "<div><dt>إجازة إضافية</dt><dd>" + r.extra + "</dd></div>";
+    renderMeta();
+    for (var p = 1; p <= TOTAL; p++) { var im = new Image(); im.src = src(p); }
+  }
+
+  // تقليب الصفحة من اليمين إلى اليسار: الصفحة الحالية تنثني حول حافتها اليمنى
+  function go(n) {
+    if (busy || n === state.page || n < 1 || n > TOTAL) return;
+    var forward = n > state.page;
+    var current = stage.firstElementChild;
+    var incoming = leaf(n);
+    state.page = n;
+    if (reduce || !current || !current.animate) { stage.innerHTML = ""; stage.appendChild(incoming); renderMeta(); return; }
+    busy = true;
+    if (forward) {
+      stage.insertBefore(incoming, current);
+      var a = current.animate([{ transform: "rotateY(0deg)", filter: "brightness(1)" }, { transform: "rotateY(100deg)", filter: "brightness(.75)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      a.onfinish = function () { current.remove(); busy = false; };
+    } else {
+      stage.appendChild(incoming);
+      var b = incoming.animate([{ transform: "rotateY(100deg)", filter: "brightness(.75)" }, { transform: "rotateY(0deg)", filter: "brightness(1)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      b.onfinish = function () { current.remove(); busy = false; };
+    }
+    renderMeta();
+  }
+
+  function setHash() { try { history.replaceState(null, "", "#" + state.stage + "-" + state.region); } catch (e) { location.hash = state.stage + "-" + state.region; } }
+  function fromHash() {
+    var m = /^#(initial|upper|middle|secondary)-(western|other)$/.exec(location.hash || "");
+    if (m) { state.stage = m[1]; state.region = m[2]; state.page = 1; return true; }
+    return false;
+  }
+
+  document.getElementById("stages").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    state.stage = b.dataset.stage; state.page = 1; setHash(); renderAll();
+  });
+  document.getElementById("regions").addEventListener("click", function (e) {
+    var b = e.target.closest("button"); if (!b) return;
+    state.region = b.dataset.region; state.page = 1; setHash(); renderAll();
+  });
+  ["next", "next2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(state.page + 1); }); });
+  ["prev", "prev2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(state.page - 1); }); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") go(state.page + 1);
+    if (e.key === "ArrowRight") go(state.page - 1);
+  });
+  // السحب: من اليسار إلى اليمين = الصفحة التالية (اتجاه الكتاب العربي)
+  var x0 = null;
+  stage.addEventListener("pointerdown", function (e) { x0 = e.clientX; });
+  stage.addEventListener("pointerup", function (e) {
+    if (x0 === null) return;
+    var dx = e.clientX - x0; x0 = null;
+    if (dx > 40) go(state.page + 1); else if (dx < -40) go(state.page - 1);
+  });
+  stage.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  thumbs.addEventListener("contextmenu", function (e) { e.preventDefault(); });
+  window.addEventListener("hashchange", function () { if (fromHash()) renderAll(); });
+
+  if (STORE_URL) { var buy = document.getElementById("buy"); buy.href = STORE_URL; buy.hidden = false; }
+  fromHash();
+  renderAll();
+})();
+</script>
+
+</body>
+</html>
