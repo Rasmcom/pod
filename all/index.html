@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>سجلات النشاط ١٤٤٨هـ — صفحة المعاينة الموحّدة | رسم</title>
+<meta name="description" content="تصفّح صفحات سجلات النشاط الطلابي ١٤٤٨هـ قبل الشراء: البرامج الإثرائية، ومجلس الحوار الطلابي، والوعي الفكري، والعمل التطوعي، والشراكة المجتمعية، وملف ترسيخ القيم، وجدول الإذاعة المدرسية.">
+<meta property="og:title" content="سجلات النشاط ١٤٤٨هـ — تصفّح قبل الشراء">
+<meta property="og:description" content="سبعة سجلات وملفات جاهزة للتعبئة بهوية وزارة التعليم، بصيغتي Word وPDF. تصفّح صفحاتها ثم اطلبها من متجر رسم.">
+<meta property="og:image" content="https://rasmcom.github.io/pod/all/og.jpg">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#0B1F3A">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700&display=swap">
+<style>
+/* Layout: navy masthead with count + jump links → records grid → other files grid → footer */
+:root {
+  --navy: #13284F; --navy2: #0B1F3A; --navy3: #071426; --teal: #2C8DB0; --mint: #5FD3C6; --gold: #BEA87F; --gold2: #D8C18F; --sun: #E8BE5C;
+  --bg: #EEF2F7; --surface: #FFFFFF; --fg: #13284F; --muted: #5C6B82; --line: #D3DAE4; --chip: #E6ECF4;
+  --shadow: 0 24px 48px -26px rgba(19, 40, 79, .55);
+  --display: "Cairo", "Tajawal", "Segoe UI", Tahoma, sans-serif; --body: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+}
+* { box-sizing: border-box; }
+html { direction: rtl; scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.7; }
+a { color: inherit; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+/* الترويسة */
+.mast { color: #fff; position: relative; overflow: hidden;
+  background: radial-gradient(800px 380px at 12% 115%, rgba(95,211,198,.28), transparent 70%),
+              radial-gradient(600px 300px at 95% -10%, rgba(232,190,92,.16), transparent 70%),
+              linear-gradient(165deg, #133D58 0%, var(--navy) 45%, var(--navy2) 100%); }
+.mast::before { content: ""; position: absolute; inset: 0; opacity: .35; pointer-events: none;
+  background-image: radial-gradient(circle, rgba(255,255,255,.22) 1.6px, transparent 2.2px); background-size: 26px 26px;
+  -webkit-mask-image: linear-gradient(to left, #000, transparent 70%); mask-image: linear-gradient(to left, #000, transparent 70%); }
+.mast::after { content: ""; position: absolute; inset: auto 0 0 0; height: 5px; background: linear-gradient(to left, #A88A52, var(--gold2) 45%, var(--gold)); }
+.mast .wrap { position: relative; padding-block: calc(env(safe-area-inset-top, 0px) + 28px) 40px; }
+.brand { display: flex; align-items: center; gap: 12px; color: #C9D6E2; font-size: .95rem; font-weight: 700; }
+.brand img { width: 34px; height: auto; }
+.mast h1 { font-family: var(--display); font-weight: 900; font-size: clamp(1.9rem, 1.1rem + 3.6vw, 3.4rem); line-height: 1.25; margin: 18px 0 8px; text-wrap: balance; }
+.mast h1 span { color: var(--mint); }
+.mast .lead { margin: 0; color: #D4E0EA; font-size: clamp(1rem, .92rem + .4vw, 1.2rem); max-width: 46ch; }
+.facts { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; padding: 0; list-style: none; }
+.facts li { background: rgba(255,255,255,.09); border: 1px solid rgba(255,255,255,.18); border-radius: 999px; padding: 6px 16px; font-weight: 700; font-size: .95rem; }
+.facts li b { color: var(--sun); font-family: var(--display); }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.jump a { text-decoration: none; font-family: var(--display); font-weight: 700; font-size: .92rem; color: #fff; padding: 6px 14px; border-radius: 10px; background: rgba(95,211,198,.16); border: 1px solid rgba(95,211,198,.35); }
+.jump a:hover { background: rgba(95,211,198,.3); }
+
+/* الأقسام */
+section { padding-block: 34px 8px; }
+.sec-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 18px; }
+.sec-head h2 { font-family: var(--display); font-weight: 800; font-size: clamp(1.35rem, 1.1rem + 1vw, 1.8rem); margin: 0; position: relative; padding-right: 16px; }
+.sec-head h2::before { content: ""; position: absolute; right: 0; top: .35em; bottom: .3em; width: 6px; border-radius: 6px; background: linear-gradient(var(--mint), var(--teal)); }
+.sec-head p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+.grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+@media (max-width: 980px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 620px) { .grid { grid-template-columns: 1fr; } }
+
+/* البطاقة */
+.card { background: var(--surface); border-radius: 22px; overflow: hidden; box-shadow: var(--shadow); display: flex; flex-direction: column; border: 1px solid #E2E8F0; transition: transform .25s ease, box-shadow .25s ease; scroll-margin-top: 16px; }
+.card:hover { transform: translateY(-4px); box-shadow: 0 30px 60px -28px rgba(19, 40, 79, .7); }
+.cover { position: relative; aspect-ratio: 4 / 3; display: flex; align-items: center; justify-content: center; overflow: hidden;
+  background: radial-gradient(420px 240px at 50% 110%, rgba(95,211,198,.35), transparent 70%), linear-gradient(160deg, #183A63, var(--navy3)); }
+.cover::before { content: ""; position: absolute; inset: 0; opacity: .3; background-image: radial-gradient(circle, rgba(255,255,255,.25) 1.4px, transparent 2px); background-size: 22px 22px; }
+.cover img { position: relative; z-index: 1; max-width: 84%; max-height: 82%; width: auto; height: auto; border-radius: 6px; box-shadow: 0 22px 40px -12px rgba(0,0,0,.65), 0 0 0 1px rgba(255,255,255,.15); transform: rotate(-2deg); transition: transform .35s ease; }
+.card:hover .cover img { transform: rotate(0deg) scale(1.03); }
+.cover .num { z-index: 2; position: absolute; top: 12px; right: 14px; font-family: var(--display); font-weight: 900; font-size: 1rem; color: var(--navy3); background: var(--sun); width: 38px; height: 38px; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 6px 16px rgba(0,0,0,.35); }
+.cover .tag { z-index: 2; position: absolute; top: 14px; left: 14px; font-size: .82rem; font-weight: 700; color: #fff; background: rgba(7,20,38,.7); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 3px 12px; backdrop-filter: blur(4px); }
+.body { padding: 18px 20px 20px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
+.body h3 { font-family: var(--display); font-weight: 800; font-size: 1.32rem; line-height: 1.4; margin: 0; }
+.body p { margin: 0; color: var(--muted); font-size: .98rem; }
+.meta { display: flex; flex-wrap: wrap; gap: 6px; list-style: none; padding: 0; margin: 2px 0 0; }
+.meta li { background: var(--chip); color: var(--navy); border-radius: 8px; padding: 2px 10px; font-size: .86rem; font-weight: 700; }
+.meta li.hl { background: #FFF4DA; color: #8A6512; }
+.actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: auto; padding-top: 8px; }
+.btn { display: flex; align-items: center; justify-content: center; gap: 8px; text-decoration: none; font-family: var(--display); font-weight: 800; font-size: 1rem; padding: 11px 12px; border-radius: 12px; min-height: 48px; text-align: center; line-height: 1.3; }
+.btn svg { width: 20px; height: 20px; flex: none; }
+.btn.view { background: var(--navy); color: #fff; }
+.btn.view:hover { background: #1D3A6E; }
+.btn.buy { background: linear-gradient(90deg, #1FB5A8, #2BB673); color: #fff; }
+.btn.buy:hover { filter: brightness(1.06); }
+.btn:focus-visible { outline: 3px solid var(--sun); outline-offset: 2px; }
+
+/* التذييل */
+footer { margin-top: 40px; background: var(--navy2); color: #C9D6E2; }
+footer .wrap { padding-block: 26px calc(env(safe-area-inset-bottom, 0px) + 26px); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 14px; }
+footer .brand { color: #fff; font-family: var(--display); font-weight: 800; font-size: 1.05rem; }
+footer a.store { text-decoration: none; font-family: var(--display); font-weight: 800; color: var(--navy3); background: var(--sun); padding: 8px 20px; border-radius: 999px; direction: ltr; }
+footer small { display: block; width: 100%; color: #8FA3B8; font-size: .85rem; }
+
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+
+<header class="mast">
+  <div class="wrap">
+    <div class="brand"><img src="../rasm.png" alt="" width="34" height="66">رسم للتصميم والخدمات التعليمية</div>
+    <h1>سجلات النشاط <span>١٤٤٨هـ</span><br>تصفّحها قبل الشراء</h1>
+    <p class="lead">سجلات مكتوبة ومنظّمة بهوية وزارة التعليم وجاهزة لتعبئتكم. افتح معاينة أي سجل لتتصفح صفحاته، ثم اطلبه من المتجر.</p>
+    <ul class="facts">
+      <li><b>٧</b> سجلات وملفات</li>
+      <li>بهوية وزارة التعليم</li>
+      <li>Word قابل للتعديل</li>
+      <li>PDF جاهز للطباعة</li>
+    </ul>
+    <nav class="jump" aria-label="الانتقال إلى سجل">
+      <a href="#enrich">البرامج الإثرائية</a>
+      <a href="#hiwar">الحوار الطلابي</a>
+      <a href="#waei">الوعي الفكري</a>
+      <a href="#volunteer">العمل التطوعي</a>
+      <a href="#sharaka">الشراكة المجتمعية</a>
+      <a href="#qiam">ترسيخ القيم</a>
+      <a href="#broadcast">جدول الإذاعة</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section aria-labelledby="h-records">
+    <div class="sec-head">
+      <h2 id="h-records">سجلات النشاط الطلابي</h2>
+      <p>لزيارة فريق التقويم الخارجي</p>
+    </div>
+    <div class="grid">
+
+      <article class="card" id="enrich">
+        <div class="cover"><span class="num">١</span><span class="tag">٤ مراحل</span><img src="../enrich/secondary/p/01.jpg" alt="غلاف سجل البرامج الإثرائية" loading="lazy" width="1556" height="1100"></div>
+        <div class="body">
+          <h3>سجل البرامج الإثرائية</h3>
+          <p>بنك برامج إثرائية مرتبط بالمسابقات الطلابية المعتمدة: بطاقة لكل برنامج، ومصفوفة اختيار، وتقويم زمني للتسجيل والتنفيذ.</p>
+          <ul class="meta"><li class="hl">حتى ٣٠ برنامجًا</li><li>الأولية · العليا · المتوسطة · الثانوية</li><li>بنين وبنات</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../enrich/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/%D8%B3%D8%AC%D9%84-%D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC-%D8%A7%D9%84%D8%A5%D8%AB%D8%B1%D8%A7%D8%A6%D9%8A%D8%A9-1448/p1898282169" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="hiwar">
+        <div class="cover"><span class="num">٢</span><span class="tag">جميع المراحل</span><img src="../hiwar/b/p/01.jpg" alt="غلاف سجل مجلس الحوار الطلابي" loading="lazy" width="1556" height="1100"></div>
+        <div class="body">
+          <h3>سجل مجلس الحوار الطلابي</h3>
+          <p>قرار التشكيل والهيئة الإشرافية، وخطة زمنية لعشرة اجتماعات بمحاضرها وصفحات توقيع الحضور، ثم متابعة التوصيات والتقرير الختامي.</p>
+          <ul class="meta"><li class="hl">١٠ اجتماعات + إضافي</li><li>٣٥ صفحة</li><li>بنين وبنات</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../hiwar/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/%D8%B3%D8%AC%D9%84-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1-%D8%A7%D9%84%D8%B7%D9%84%D8%A7%D8%A8%D9%8A-1448/p1456056963" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="waei">
+        <div class="cover"><span class="num">٣</span><span class="tag">من رياض الأطفال</span><img src="../waei/primary/p/01.jpg" alt="غلاف سجل الوعي الفكري" loading="lazy" width="1100" height="1555"></div>
+        <div class="body">
+          <h3>سجل الوعي الفكري</h3>
+          <p>من تشكيل اللجنة إلى التقرير المتكامل: خمسة محاضر جاهزة، ومصفوفة أنشطة مرتبطة بمستهدفات الوعي الفكري، وتقارير ربعية واستبانة لقياس الأثر.</p>
+          <ul class="meta"><li class="hl">٤٢ نشاطًا</li><li>رياض الأطفال حتى الثانوية</li><li>بنين وبنات</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../waei/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/%D8%B3%D8%AC%D9%84-%D8%A7%D9%84%D9%88%D8%B9%D9%8A-%D8%A7%D9%84%D9%81%D9%83%D8%B1%D9%8A-1448/p406676665" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="volunteer">
+        <div class="cover"><span class="num">٤</span><span class="tag">٣ مراحل</span><img src="../volunteer/primary/p/01.jpg" alt="غلاف ملف العمل التطوعي" loading="lazy" width="1100" height="1555"></div>
+        <div class="body">
+          <h3>ملف العمل التطوعي</h3>
+          <p>خطة مبادرات موزعة على الفصلين، ونموذج توثيق المبادرة، وسجل ساعات التطوع، وموافقة ولي الأمر، وشهادة المتطوع المتميز.</p>
+          <ul class="meta"><li class="hl">١٤ مبادرة</li><li>الابتدائية · المتوسطة · الثانوية</li><li>بنين وبنات</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../volunteer/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/%D9%85%D9%84%D9%81-%D8%A7%D9%84%D8%B9%D9%85%D9%84-%D8%A7%D9%84%D8%AA%D8%B7%D9%88%D8%B9%D9%8A-1448/p994172177" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="sharaka">
+        <div class="cover"><span class="num">٥</span><span class="tag">جميع المراحل</span><img src="../sharaka/boys/p/01.jpg" alt="غلاف سجل الشراكة المجتمعية" loading="lazy" width="1100" height="1555"></div>
+        <div class="body">
+          <h3>سجل الشراكة المجتمعية</h3>
+          <p>المدرسة والأسرة والمجتمع: خطط وتحليل لواقع الشراكة، وأنشطة لستة أنماط، وأربعة محاضر، وتسعة نماذج، ونص اتفاقية الشراكة.</p>
+          <ul class="meta"><li class="hl">٣٨ صفحة</li><li>الابتدائية · المتوسطة · الثانوية</li><li>بنين وبنات</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../sharaka/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/%D8%B3%D8%AC%D9%84-%D8%A7%D9%84%D8%B4%D8%B1%D8%A7%D9%83%D8%A9-%D8%A7%D9%84%D9%85%D8%AC%D8%AA%D9%85%D8%B9%D9%8A%D8%A9-1448/p1526366071" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <section aria-labelledby="h-more">
+    <div class="sec-head">
+      <h2 id="h-more">ملفات أخرى</h2>
+      <p>من نفس المتجر</p>
+    </div>
+    <div class="grid">
+
+      <article class="card" id="qiam">
+        <div class="cover"><span class="tag">كل المراحل</span><img src="../qiam/p/01.jpg" alt="غلاف ملف مشروع ترسيخ القيم وتعزيز الهوية الوطنية" loading="lazy" width="1100" height="1555"></div>
+        <div class="body">
+          <h3>ملف مشروع ترسيخ القيم وتعزيز الهوية الوطنية</h3>
+          <p>بطاقة لكل مبادرة من المبادرات الاثنتي عشرة، وقرار تشكيل فريق العمل، وتسعة محاضر مكتوبة، وتقارير شهرية وفصلية وختامية.</p>
+          <ul class="meta"><li class="hl">٩٦ صفحة</li><li>Word قابل للتعديل</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../qiam/">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/ملف-مشروع-ترسيخ-القيم-وتعزيز-الهوية-الوطنية-1448/p1511615391" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="card" id="broadcast">
+        <div class="cover"><span class="tag">الفصل الأول</span><img src="../p/initial-other-1.jpg" alt="صفحة من جدول الإذاعة المدرسية" loading="lazy" width="1400" height="990"></div>
+        <div class="body">
+          <h3>جدول الإذاعة المدرسية</h3>
+          <p>عنوان الإذاعة لكل يوم من أدلة برامج الحضور والاصطفاف الصباحي، بتاريخ هجري لكل يوم، وخانات للجهة المنفذة والمعلمة المسؤولة والتوقيع.</p>
+          <ul class="meta"><li class="hl">٤ مراحل</li><li>تقويم الغربية وبقية المناطق</li><li>Word + PDF</li></ul>
+          <div class="actions">
+            <a class="btn view" href="../">تصفّح المعاينة</a>
+            <a class="btn buy" href="https://rasmcom.com/جدول-الإذاعة-المدرسية-١٤٤٨هـ-الفصل-الأول-word-وpdf/p1520000968" target="_blank" rel="noopener">اطلب من المتجر</a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="brand"><img src="../rasm.png" alt="" width="30" height="58">رسم للتصميم والخدمات التعليمية</div>
+    <a class="store" href="https://rasmcom.com" target="_blank" rel="noopener">rasmcom.com</a>
+    <small>صفحات المعاينة نماذج عليها علامة مائية، والملفات الكاملة تصلك بلا علامة.</small>
+  </div>
+</footer>
+
+</body>
+</html>
