@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>سجل مجلس الحوار الطلابي ١٤٤٨هـ — معاينة قبل الشراء</title>
+<meta name="description" content="معاينة صفحات من سجل مجلس الحوار الطلابي للعام الدراسي ١٤٤٨هـ: التشكيل والحوكمة والخطة الزمنية ومحاضر عشرة اجتماعات وتوقيع الحضور ومتابعة التوصيات والتقرير الختامي، بنين وبنات، بصيغتي Word وPDF.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@700;800&family=Tajawal:wght@400;500;700;800&display=swap">
+<style>
+/* Layout: navy masthead → boys/girls switch → section chips → landscape page viewer with RTL page-turn and zoom → thumbnails → the ten meetings → what you get */
+:root {
+  --navy: #13284F; --navy2: #0B1F3A; --purple: #3B1F7A; --teal: #2C8DB0; --sky: #5BB4D4; --mint: #5FD3C6; --gold: #BEA87F; --gold2: #D8C18F;
+  --bg: #EEF2F7; --surface: #FFFFFF; --fg: #13284F; --muted: #5C6B82; --line: #D3DAE4; --chip: #E6ECF4;
+  --shade: rgba(6, 16, 34, .9); --shadow: 0 24px 48px -22px rgba(19, 40, 79, .55);
+  --display: "Cairo", "Tajawal", "Segoe UI", Tahoma, sans-serif; --body: "Tajawal", "Segoe UI", Tahoma, sans-serif;
+  --d1: #5B4FBF; --d2: #B0893A; --d3: #2C7FB8; --d4: #1A9C8C; --d5: #4E8A3E;
+}
+* { box-sizing: border-box; }
+html { direction: rtl; scroll-padding-top: 16px; }
+body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.7; }
+.wrap { max-width: 1180px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+
+.mast { background: radial-gradient(700px 300px at 15% 120%, rgba(95,211,198,.25), transparent 70%), linear-gradient(165deg, #133D58 0%, var(--navy) 45%, var(--navy2) 100%); color: #fff; position: relative; }
+.mast::after { content: ""; position: absolute; inset: auto 0 0 0; height: 5px; background: linear-gradient(to left, #A88A52, var(--gold2) 45%, var(--gold)); }
+.mast .wrap { padding-block: calc(env(safe-area-inset-top, 0px) + 22px) 28px; display: flex; gap: 20px; align-items: center; }
+.mast img { width: 46px; height: auto; flex: none; }
+.mast h1 { font-family: var(--display); font-weight: 800; font-size: clamp(1.45rem, 1rem + 2.2vw, 2.4rem); line-height: 1.3; margin: 0; text-wrap: balance; }
+.mast p { margin: 4px 0 0; color: #C9D6E2; font-size: 1rem; }
+.mast .year { color: var(--mint); font-weight: 700; }
+
+.stages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); max-width: 620px; gap: 10px; padding-block: 22px 4px; }
+.stages button { font: inherit; text-align: right; cursor: pointer; border: 1.5px solid var(--line); background: var(--surface); color: var(--fg); border-radius: 14px; padding: 12px 14px; display: grid; gap: 2px; }
+.stages button b { font-family: var(--display); font-weight: 800; font-size: 1.08rem; }
+.stages button small { color: var(--muted); font-size: .88rem; }
+.stages button em { font-style: normal; color: var(--teal); font-weight: 700; font-size: .9rem; }
+.stages button:hover { border-color: var(--teal); }
+.stages button[aria-pressed="true"] { background: var(--navy); border-color: var(--navy); color: #fff; box-shadow: var(--shadow); }
+.stages button[aria-pressed="true"] small { color: #C9D6E2; }
+.stages button[aria-pressed="true"] em { color: var(--gold2); }
+.label { font-size: .9rem; color: var(--muted); font-weight: 700; margin: 18px 0 0; }
+
+.chips { display: flex; flex-wrap: wrap; gap: 8px; padding-block: 14px 12px; }
+.chips button { font: 700 .98rem var(--body); color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 7px 16px; cursor: pointer; display: inline-flex; gap: 8px; align-items: center; }
+.chips button small { font-weight: 500; color: var(--muted); }
+.chips button:hover { border-color: var(--teal); }
+.chips button[aria-pressed="true"] { background: var(--teal); border-color: var(--teal); color: #fff; }
+.chips button[aria-pressed="true"] small { color: #E3F3F8; }
+button:focus-visible, .thumb:focus-visible { outline: 3px solid var(--mint); outline-offset: 2px; }
+
+.viewer { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 300px); gap: 24px; align-items: start; }
+.book { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: center; }
+.stage { position: relative; width: min(100%, 860px, calc(80vh * 1556 / 1100)); margin-inline: auto; aspect-ratio: 1556 / 1100; perspective: 2600px; border-radius: 6px; background: #fff; box-shadow: var(--shadow); touch-action: pan-y; user-select: none; -webkit-user-select: none; }
+.leaf { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: #fff; transform-origin: right center; backface-visibility: hidden; will-change: transform; }
+.leaf img { width: 100%; height: 100%; object-fit: contain; display: block; pointer-events: none; -webkit-user-drag: none; }
+.leaf::after { content: ""; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(to left, rgba(19,40,79,.10), transparent 4%); }
+.zoombtn { position: absolute; inset: auto auto 12px 12px; z-index: 2; display: inline-flex; gap: 6px; align-items: center; font: 700 .9rem var(--body); color: #fff; background: rgba(19, 40, 79, .88); border: 0; border-radius: 999px; padding: 6px 14px 7px; cursor: pointer; }
+.zoombtn svg { width: 16px; height: 16px; }
+.nav { width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line); background: var(--surface); color: var(--fg); display: grid; place-items: center; cursor: pointer; }
+.nav:hover:not(:disabled) { border-color: var(--teal); color: var(--teal); }
+.nav:disabled { opacity: .35; cursor: default; }
+.nav svg { width: 22px; height: 22px; }
+.navrow { display: none; justify-content: space-between; align-items: center; gap: 12px; padding-top: 10px; }
+.navrow span { color: var(--muted); font-size: .92rem; }
+
+.info { display: grid; gap: 14px; align-content: start; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); }
+.now { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; display: grid; gap: 4px; }
+.now .sec { font-size: .85rem; color: var(--teal); font-weight: 700; }
+.now h2 { margin: 0; font-family: var(--display); font-weight: 800; font-size: 1.2rem; line-height: 1.45; text-wrap: balance; }
+.now p { margin: 0; font-size: .97rem; }
+.now .count { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font-size: .9rem; padding-top: 6px; border-top: 1px dashed var(--line); margin-top: 6px; }
+.cta { display: inline-flex; justify-content: center; align-items: center; gap: 8px; text-decoration: none; background: linear-gradient(90deg, #A88A52, var(--gold2)); color: #1C1405; font: 800 1.05rem var(--display); border-radius: 10px; padding: 12px 18px; }
+.note { font-size: .85rem; color: var(--muted); margin: 0; }
+
+.thumbs { display: grid; grid-template-columns: repeat(auto-fill, minmax(118px, 1fr)); gap: 10px; padding-block: 22px 4px; }
+.thumb { position: relative; border: 2px solid transparent; border-radius: 5px; padding: 0; background: #fff; cursor: pointer; overflow: hidden; aspect-ratio: 1556 / 1100; box-shadow: 0 4px 12px -8px rgba(19,40,79,.6); }
+.thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.thumb[aria-current="true"] { border-color: var(--teal); }
+
+h2.block { font-family: var(--display); font-weight: 800; font-size: 1.35rem; margin: 0 0 4px; text-wrap: balance; }
+.lead { margin: 0 0 14px; color: var(--muted); }
+.progs { padding-block: 34px 0; }
+.doms { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; align-items: start; }
+.dom { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; overflow: hidden; }
+.dom h3 { margin: 0; padding: 9px 14px; color: #fff; font-family: var(--display); font-size: 1rem; display: flex; justify-content: space-between; gap: 8px; }
+.dom h3 span { background: rgba(255,255,255,.22); border-radius: 999px; padding: 0 10px; font-size: .9rem; }
+.dom ul { list-style: none; margin: 0; padding: 6px 14px 10px; }
+.dom li { padding: 5px 0; border-bottom: 1px dashed var(--line); display: grid; gap: 0; }
+.dom li:last-child { border-bottom: 0; }
+.dom li b { font-weight: 700; font-size: .96rem; }
+.dom li small { color: var(--muted); font-size: .84rem; }
+
+.details { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(0, 1fr); gap: 28px; padding-block: 34px 48px; }
+.facts { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.facts li { display: grid; grid-template-columns: 7.5rem minmax(0, 1fr); gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--line); }
+.facts li:last-child { border-bottom: 0; }
+.facts b { font-weight: 700; color: var(--teal); }
+.side { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 20px; display: grid; gap: 12px; align-content: start; }
+.side h3 { margin: 0; font-family: var(--display); font-size: 1.05rem; }
+.kv { display: grid; gap: 8px; margin: 0; }
+.kv div { display: flex; justify-content: space-between; gap: 12px; font-size: .95rem; border-bottom: 1px dashed var(--line); padding-bottom: 6px; }
+.kv div:last-child { border-bottom: 0; }
+.kv dt { color: var(--muted); }
+.kv dd { margin: 0; font-weight: 700; text-align: left; }
+footer { border-top: 1px solid var(--line); }
+footer .wrap { padding-block: 18px calc(env(safe-area-inset-bottom, 0px) + 18px); font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+
+.zoom { position: fixed; inset: 0; z-index: 50; background: var(--shade); display: grid; grid-template-rows: auto minmax(0, 1fr); }
+.zoom[hidden] { display: none; }
+.zoom .bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: #fff; padding: calc(env(safe-area-inset-top, 0px) + 10px) max(16px, env(safe-area-inset-right, 0px)) 10px max(16px, env(safe-area-inset-left, 0px)); }
+.zoom .bar b { font-family: var(--display); font-size: 1rem; }
+.zoom .bar .ctl { display: flex; gap: 8px; }
+.zoom .bar button { font: 700 .95rem var(--body); color: #fff; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.25); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+.zoom .scroll { overflow: auto; padding: 0 max(16px, env(safe-area-inset-right, 0px)) calc(env(safe-area-inset-bottom, 0px) + 24px) max(16px, env(safe-area-inset-left, 0px)); -webkit-overflow-scrolling: touch; }
+.zoom .scroll img { display: block; margin: 0 auto; width: min(100%, 1200px); max-width: none; height: auto; border-radius: 4px; background: #fff; cursor: zoom-in; }
+.zoom.big .scroll img { width: 2000px; cursor: zoom-out; }
+
+@media (max-width: 960px) {
+  .viewer { grid-template-columns: minmax(0, 1fr); }
+  .info { position: static; }
+  .details { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .book { grid-template-columns: minmax(0, 1fr); }
+  .book .nav { display: none; }
+  .navrow { display: flex; }
+  .facts li { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+  .thumbs { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+  .mast img { width: 36px; }
+}
+.meets { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 10px; }
+.meets li { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 2px 12px; align-items: center; }
+.meets li i { font-style: normal; grid-row: span 2; width: 38px; height: 38px; border-radius: 10px; display: grid; place-items: center; background: var(--navy); color: #fff; font: 800 1rem var(--display); }
+.meets li:nth-child(3n+2) i { background: var(--teal); }
+.meets li:nth-child(3n) i { background: var(--purple); }
+.meets li b { font-weight: 700; font-size: .98rem; line-height: 1.5; }
+.meets li small { color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <img src="rasm.png" alt="رسم للتصميم والخدمات التعليمية" width="46" height="89">
+    <div>
+      <h1>سجل مجلس الحوار الطلابي — جاهز للتطبيق في كل المراحل</h1>
+      <p>العام الدراسي <span class="year">١٤٤٨هـ</span> · بنين وبنات · اختر النسخة وتصفح ١٧ صفحة من السجل قبل الشراء</p>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <p class="label" id="stagesLabel">اختر النسخة</p>
+  <nav class="stages" id="stages" aria-labelledby="stagesLabel"></nav>
+  <nav class="chips" id="chips" aria-label="أقسام المعاينة"></nav>
+
+  <section class="viewer" aria-label="معاينة الصفحات">
+    <div>
+      <div class="book">
+        <button class="nav" id="prev" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <div class="stage" id="stage" aria-live="polite">
+          <button class="zoombtn" id="zoomOpen" type="button"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5M11 8.5v5M8.5 11h5"/></svg>تكبير</button>
+        </div>
+        <button class="nav" id="next" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      </div>
+      <div class="navrow">
+        <button class="nav" id="prev2" type="button" aria-label="الصفحة السابقة"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 6l6 6-6 6"/></svg></button>
+        <span id="mobCount"></span>
+        <button class="nav" id="next2" type="button" aria-label="الصفحة التالية"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 6l-6 6 6 6"/></svg></button>
+      </div>
+    </div>
+    <aside class="info">
+      <div class="now">
+        <span class="sec" id="secName"></span>
+        <h2 id="pageTitle"></h2>
+        <p id="pageNote"></p>
+        <div class="count"><span id="pageCount"></span><span id="pageReal"></span></div>
+      </div>
+      <a class="cta" id="buy" href="#" target="_blank" rel="noopener">اطلب السجل من المتجر</a>
+      <p class="note">الصفحات المعروضة نموذج عليه علامة مائية، والسجل الكامل يصلك بصيغتي Word وPDF بلا علامة.</p>
+    </aside>
+  </section>
+
+  <div class="thumbs" id="thumbs"></div>
+
+  <section class="progs" aria-labelledby="progsTitle">
+    <h2 class="block" id="progsTitle">اجتماعات المجلس العشرة في الخطة الزمنية</h2>
+    <p class="lead" id="progsLead"></p>
+    <ol class="meets" id="meets"></ol>
+  </section>
+
+  <section class="details">
+    <div>
+      <h2 class="block">ما يصلك بعد الشراء</h2>
+      <ul class="facts">
+        <li><b>السجل</b><span>سجل كامل في ٣٥ صفحة أفقية بصيغتي Word قابل للتعديل وPDF جاهز للطباعة، بهوية وزارة التعليم، وخانات لإدارة التعليم واسم المدرسة.</span></li>
+        <li><b>التأسيس</b><span>المقدمة، والهدف العام والأهداف التفصيلية، وعشرة مؤشرات نجاح قابلة للقياس، وحوكمة المجلس وتوزيع الأدوار، والمهام العامة.</span></li>
+        <li><b>التشكيل والخطة</b><span>قرار تشكيل المجلس بجدول الأعضاء وصفاتهم والهيئة الإشرافية، والخطة الزمنية لعشرة اجتماعات بمؤشر التحقق والشاهد.</span></li>
+        <li><b>الاجتماعات</b><span>محضر لكل اجتماع بجدول الأعمال والتوصيات التنفيذية والمسؤول والشاهد، تليه صفحة توقيع الحضور، ومحضر إضافي للاجتماعات الطارئة.</span></li>
+        <li><b>المتابعة والتوثيق</b><span>متابعة تنفيذ التوصيات ونسبة تفعيلها، ونماذج الشواهد المطلوبة، والتقرير الختامي، والخاتمة والاعتماد.</span></li>
+        <li><b>المراحل</b><span>السجل عام يصلح للمرحلة الابتدائية والمتوسطة والثانوية، فاختر نسخة البنين أو البنات.</span></li>
+      </ul>
+    </div>
+    <aside class="side" aria-labelledby="factsTitle">
+      <h3 id="factsTitle">بيانات السجل</h3>
+      <dl class="kv">
+        <div><dt>النسخة</dt><dd id="kvStage"></dd></div>
+        <div><dt>عدد الاجتماعات</dt><dd>١٠ اجتماعات + إضافي</dd></div>
+        <div><dt>عدد الصفحات</dt><dd id="kvPages"></dd></div>
+        <div><dt>الصيغة</dt><dd>Word + PDF</dd></div>
+        <div><dt>العام الدراسي</dt><dd>١٤٤٨هـ</dd></div>
+        <div><dt>المراحل</dt><dd>جميع المراحل</dd></div>
+      </dl>
+      <a class="cta" id="buy2" href="#" target="_blank" rel="noopener">اطلب السجل من المتجر</a>
+    </aside>
+  </section>
+</main>
+
+<div class="zoom" id="zoom" hidden role="dialog" aria-modal="true" aria-labelledby="zoomTitle">
+  <div class="bar"><b id="zoomTitle"></b><div class="ctl"><button type="button" id="zoomPrev">السابقة</button><button type="button" id="zoomNext">التالية</button><button type="button" id="zoomClose">إغلاق</button></div></div>
+  <div class="scroll" id="zoomScroll"><img id="zoomImg" alt=""></div>
+</div>
+
+<footer>
+  <div class="wrap"><span>رسم للتصميم والخدمات التعليمية</span><span>سجل مجلس الحوار الطلابي · ١٤٤٨هـ</span></div>
+</footer>
+
+<script>
+(function () {
+  var STORE_URL = "https://rasmcom.com/%D8%B3%D8%AC%D9%84-%D9%85%D8%AC%D9%84%D8%B3-%D8%A7%D9%84%D8%AD%D9%88%D8%A7%D8%B1-%D8%A7%D9%84%D8%B7%D9%84%D8%A7%D8%A8%D9%8A-1448/p1456056963";
+  var DATA = {"b": {"label": "نسخة البنين", "sub": "طلاب · رائد النشاط · مدير المدرسة", "total": 35, "pages": [{"sec": "found", "real": 1, "title": "الغلاف", "note": "غلاف بهوية وزارة التعليم وخانات لإدارة التعليم واسم المدرسة ورائد النشاط ومدير المدرسة."}, {"sec": "found", "real": 2, "title": "المحتويات", "note": "فهرس بأقسام السجل الثمانية وأرقام صفحاتها."}, {"sec": "found", "real": 3, "title": "المقدمة", "note": "تعريف بمجلس الحوار الطلابي ورسالته، وضوابط ترشيح الأعضاء، والمستفيدون ومؤشر الأثر."}, {"sec": "found", "real": 4, "title": "الهدف العام والأهداف التفصيلية", "note": "الهدف العام في تعزيز مشاركة الطلاب في القرارات التربوية، وستة أهداف تفصيلية."}, {"sec": "found", "real": 5, "title": "مؤشرات النجاح", "note": "عشرة مؤشرات قابلة للقياس لكل منها مستهدف واضح: الاجتماعات والمحاضر والتوصيات والشواهد والتقرير."}, {"sec": "gov", "real": 6, "title": "حوكمة المجلس وتوزيع الأدوار", "note": "مهام مدير المدرسة ووكيل/ة شؤون الطلاب ورائد النشاط والموجه/ة ورئيس/ة المجلس ومقرره/ا والأعضاء."}, {"sec": "gov", "real": 7, "title": "المهام العامة للمجلس", "note": "ثماني مهام للمجلس في بطاقات مرقمة."}, {"sec": "gov", "real": 8, "title": "قرار تشكيل المجلس", "note": "قرار إداري بجدول أعضاء المجلس من الطلاب وصفاتهم، والهيئة الإشرافية، واعتماد مدير المدرسة والختم."}, {"sec": "gov", "real": 9, "title": "الخطة الزمنية لاجتماعات المجلس", "note": "عشرة اجتماعات على مدار العام بالتاريخ والمقر وخانة التنفيذ ومؤشر التحقق والشاهد."}, {"sec": "meet", "real": 10, "title": "محضر الاجتماع الأول", "note": "بيانات الاجتماع، وجدول الأعمال، والتوصيات التنفيذية، والمسؤول والشاهد لكل توصية."}, {"sec": "meet", "real": 11, "title": "توقيع الحضور — الاجتماع الأول", "note": "كشف توقيع حضور الأعضاء بالاسم والصفة، وتوقيع رائد النشاط ومدير المدرسة."}, {"sec": "meet", "real": 16, "title": "محضر الاجتماع الرابع", "note": "اجتماع البيئة المدرسية ومقترحات الطلاب لتحسينها، بجدول أعماله وتوصياته."}, {"sec": "meet", "real": 30, "title": "محضر اجتماع إضافي", "note": "محضر فارغ لأي اجتماع طارئ أو إضافي، تليه صفحة توقيع الحضور."}, {"sec": "docs", "real": 32, "title": "متابعة تنفيذ التوصيات", "note": "جدول متابعة كل توصية بالمسؤول وحالة التنفيذ والشاهد، ومعادلة نسبة تفعيل التوصيات."}, {"sec": "docs", "real": 33, "title": "نماذج الشواهد المطلوبة", "note": "الشواهد المطلوبة لكل قسم: المحاضر وتوقيعات الحضور وخطابات الرفع والصور والتقارير."}, {"sec": "docs", "real": 34, "title": "التقرير الختامي لأعمال المجلس", "note": "ما تم تنفيذه، والإنجازات، والتحديات، والتوصيات للعام القادم."}, {"sec": "docs", "real": 35, "title": "الخاتمة والاعتماد", "note": "خاتمة السجل وجدول اعتماد مدير المدرسة بالاسم والتوقيع والتاريخ والختم."}], "meets": [["تشكيل المجلس وإعداد الخطة التنفيذية للمناشط والفعاليات", "محضر الاجتماع / الخطة المعتمدة"], ["الاحتفاء باليوم الوطني السعودي", "صور / برنامج الحفل"], ["الاحتفاء باليوم العالمي للمعلم", "صور / برنامج الحفل"], ["البيئة المدرسية ومقترحات الطلاب لتحسينها", "نموذج المقترحات / خطاب الرفع"], ["الاحتفاء باليوم العالمي للغة العربية", "صور / برنامج الحفل"], ["الاحتفاء بيوم التأسيس", "صور / برنامج الحفل"], ["المنافسات الرمضانية", "كشف المشاركين / صور"], ["الاحتفاء بيوم العلم السعودي", "صور / برنامج الحفل"], ["الاستعداد للاختبارات ومقترحات الطلاب حولها", "خطاب المقترحات / النشرة"], ["ختام الأنشطة الطلابية وتكريم المتميزين", "كشف المكرمين / التقرير"]]}, "g": {"label": "نسخة البنات", "sub": "طالبات · رائدة النشاط · مديرة المدرسة", "total": 35, "pages": [{"sec": "found", "real": 1, "title": "الغلاف", "note": "غلاف بهوية وزارة التعليم وخانات لإدارة التعليم واسم المدرسة ورائدة النشاط ومديرة المدرسة."}, {"sec": "found", "real": 2, "title": "المحتويات", "note": "فهرس بأقسام السجل الثمانية وأرقام صفحاتها."}, {"sec": "found", "real": 3, "title": "المقدمة", "note": "تعريف بمجلس الحوار الطلابي ورسالته، وضوابط ترشيح الأعضاء، والمستفيدون ومؤشر الأثر."}, {"sec": "found", "real": 4, "title": "الهدف العام والأهداف التفصيلية", "note": "الهدف العام في تعزيز مشاركة الطالبات في القرارات التربوية، وستة أهداف تفصيلية."}, {"sec": "found", "real": 5, "title": "مؤشرات النجاح", "note": "عشرة مؤشرات قابلة للقياس لكل منها مستهدف واضح: الاجتماعات والمحاضر والتوصيات والشواهد والتقرير."}, {"sec": "gov", "real": 6, "title": "حوكمة المجلس وتوزيع الأدوار", "note": "مهام مديرة المدرسة ووكيل/ة شؤون الطالبات ورائدة النشاط والموجه/ة ورئيس/ة المجلس ومقرره/ا والأعضاء."}, {"sec": "gov", "real": 7, "title": "المهام العامة للمجلس", "note": "ثماني مهام للمجلس في بطاقات مرقمة."}, {"sec": "gov", "real": 8, "title": "قرار تشكيل المجلس", "note": "قرار إداري بجدول أعضاء المجلس من الطالبات وصفاتهم، والهيئة الإشرافية، واعتماد مديرة المدرسة والختم."}, {"sec": "gov", "real": 9, "title": "الخطة الزمنية لاجتماعات المجلس", "note": "عشرة اجتماعات على مدار العام بالتاريخ والمقر وخانة التنفيذ ومؤشر التحقق والشاهد."}, {"sec": "meet", "real": 10, "title": "محضر الاجتماع الأول", "note": "بيانات الاجتماع، وجدول الأعمال، والتوصيات التنفيذية، والمسؤول والشاهد لكل توصية."}, {"sec": "meet", "real": 11, "title": "توقيع الحضور — الاجتماع الأول", "note": "كشف توقيع حضور الأعضاء بالاسم والصفة، وتوقيع رائدة النشاط ومديرة المدرسة."}, {"sec": "meet", "real": 16, "title": "محضر الاجتماع الرابع", "note": "اجتماع البيئة المدرسية ومقترحات الطالبات لتحسينها، بجدول أعماله وتوصياته."}, {"sec": "meet", "real": 30, "title": "محضر اجتماع إضافي", "note": "محضر فارغ لأي اجتماع طارئ أو إضافي، تليه صفحة توقيع الحضور."}, {"sec": "docs", "real": 32, "title": "متابعة تنفيذ التوصيات", "note": "جدول متابعة كل توصية بالمسؤول وحالة التنفيذ والشاهد، ومعادلة نسبة تفعيل التوصيات."}, {"sec": "docs", "real": 33, "title": "نماذج الشواهد المطلوبة", "note": "الشواهد المطلوبة لكل قسم: المحاضر وتوقيعات الحضور وخطابات الرفع والصور والتقارير."}, {"sec": "docs", "real": 34, "title": "التقرير الختامي لأعمال المجلس", "note": "ما تم تنفيذه، والإنجازات، والتحديات، والتوصيات للعام القادم."}, {"sec": "docs", "real": 35, "title": "الخاتمة والاعتماد", "note": "خاتمة السجل وجدول اعتماد مديرة المدرسة بالاسم والتوقيع والتاريخ والختم."}], "meets": [["تشكيل المجلس وإعداد الخطة التنفيذية للمناشط والفعاليات", "محضر الاجتماع / الخطة المعتمدة"], ["الاحتفاء باليوم الوطني السعودي", "صور / برنامج الحفل"], ["الاحتفاء باليوم العالمي للمعلم", "صور / برنامج الحفل"], ["البيئة المدرسية ومقترحات الطالبات لتحسينها", "نموذج المقترحات / خطاب الرفع"], ["الاحتفاء باليوم العالمي للغة العربية", "صور / برنامج الحفل"], ["الاحتفاء بيوم التأسيس", "صور / برنامج الحفل"], ["المنافسات الرمضانية", "كشف المشاركين / صور"], ["الاحتفاء بيوم العلم السعودي", "صور / برنامج الحفل"], ["الاستعداد للاختبارات ومقترحات الطالبات حولها", "خطاب المقترحات / النشرة"], ["ختام الأنشطة الطلابية وتكريم المتميزين", "كشف المكرمين / التقرير"]]}};
+  var ORDER = ["b", "g"];
+  var SECTIONS = { found: "التأسيس والأهداف", gov: "الحوكمة والتشكيل", meet: "المحاضر والحضور", docs: "المتابعة والتوثيق" };
+  var AR = function (v) { return String(v).replace(/[0-9]/g, function (d) { return "٠١٢٣٤٥٦٧٨٩"[d]; }); };
+
+  var st = "b";
+  try { var h = (location.hash || "").replace("#", ""); if (DATA[h]) st = h; } catch (e) {}
+  var cur = 1, busy = false;
+  var stage = document.getElementById("stage"), thumbs = document.getElementById("thumbs"), chips = document.getElementById("chips"), stagesEl = document.getElementById("stages"), zoom = document.getElementById("zoom");
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  function S() { return DATA[st]; }
+  function TOTAL() { return S().pages.length; }
+  function page(n) { return S().pages[n - 1]; }
+  function src(n, small) { var k = (n < 10 ? "0" : "") + n; return st + (small ? "/t/" : "/p/") + k + ".jpg"; }
+  function leaf(n) {
+    var el = document.createElement("div"); el.className = "leaf";
+    var img = document.createElement("img"); img.src = src(n); img.alt = page(n).title; img.draggable = false;
+    el.appendChild(img); return el;
+  }
+
+  function renderMeta() {
+    var p = page(cur);
+    document.getElementById("secName").textContent = SECTIONS[p.sec];
+    document.getElementById("pageTitle").textContent = p.title;
+    document.getElementById("pageNote").textContent = p.note;
+    document.getElementById("pageCount").textContent = "المعاينة " + AR(cur) + " من " + AR(TOTAL());
+    document.getElementById("mobCount").textContent = AR(cur) + " / " + AR(TOTAL());
+    document.getElementById("pageReal").textContent = "صفحة " + AR(p.real) + " في السجل";
+    ["prev", "prev2"].forEach(function (id) { document.getElementById(id).disabled = cur === 1; });
+    ["next", "next2"].forEach(function (id) { document.getElementById(id).disabled = cur === TOTAL(); });
+    Array.prototype.forEach.call(thumbs.children, function (t, i) { t.setAttribute("aria-current", String(i + 1 === cur)); });
+    Array.prototype.forEach.call(chips.children, function (c) { c.setAttribute("aria-pressed", String(c.dataset.sec === p.sec)); });
+    if (!zoom.hidden) fillZoom();
+  }
+
+  function go(n) {
+    if (busy || n === cur || n < 1 || n > TOTAL()) return;
+    var forward = n > cur, current = stage.querySelector(".leaf"), incoming = leaf(n);
+    cur = n;
+    if (reduce || !current || !current.animate || !zoom.hidden) {
+      if (current) current.remove();
+      stage.insertBefore(incoming, stage.firstChild); renderMeta(); return;
+    }
+    busy = true;
+    if (forward) {
+      stage.insertBefore(incoming, current);
+      var a = current.animate([{ transform: "rotateY(0deg)", filter: "brightness(1)" }, { transform: "rotateY(100deg)", filter: "brightness(.75)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      a.onfinish = function () { current.remove(); busy = false; };
+    } else {
+      current.after(incoming);
+      var b = incoming.animate([{ transform: "rotateY(100deg)", filter: "brightness(.75)" }, { transform: "rotateY(0deg)", filter: "brightness(1)" }], { duration: 520, easing: "cubic-bezier(.45,.05,.3,1)" });
+      b.onfinish = function () { current.remove(); busy = false; };
+    }
+    renderMeta();
+  }
+
+  function fillZoom() {
+    var p = page(cur);
+    document.getElementById("zoomTitle").textContent = p.title + " · " + AR(cur) + " / " + AR(TOTAL());
+    var im = document.getElementById("zoomImg"); im.src = src(cur); im.alt = p.title;
+    document.getElementById("zoomPrev").disabled = cur === 1;
+    document.getElementById("zoomNext").disabled = cur === TOTAL();
+  }
+  function openZoom() { zoom.hidden = false; zoom.classList.remove("big"); fillZoom(); document.getElementById("zoomClose").focus(); }
+  function closeZoom() { zoom.hidden = true; document.getElementById("zoomOpen").focus(); }
+
+  function buildStage() {
+    var d = S();
+    chips.innerHTML = "";
+    Object.keys(SECTIONS).forEach(function (k) {
+      var count = d.pages.filter(function (p) { return p.sec === k; }).length;
+      var b = document.createElement("button"); b.type = "button"; b.dataset.sec = k;
+      b.innerHTML = SECTIONS[k] + " <small>" + AR(count) + "</small>";
+      b.addEventListener("click", function () { for (var i = 0; i < d.pages.length; i++) if (d.pages[i].sec === k) { go(i + 1); break; } });
+      chips.appendChild(b);
+    });
+    thumbs.innerHTML = "";
+    for (var n = 1; n <= TOTAL(); n++) {
+      var t = document.createElement("button"); t.type = "button"; t.className = "thumb";
+      t.setAttribute("aria-label", page(n).title);
+      t.innerHTML = '<img loading="lazy" alt="" draggable="false" src="' + src(n, true) + '">';
+      (function (k) { t.addEventListener("click", function () { go(k); }); })(n);
+      thumbs.appendChild(t);
+    }
+    document.getElementById("progsLead").textContent = "لكل اجتماع محضر جاهز بجدول أعمال وتوصيات تنفيذية مقترحة، وصفحة لتوقيع الحضور، وشاهد يُحفظ في ملف المجلس (" + d.label + ").";
+    var ol = document.getElementById("meets"); ol.innerHTML = "";
+    d.meets.forEach(function (m, i) {
+      var li = document.createElement("li"); li.innerHTML = "<i></i><b></b><small></small>";
+      li.children[0].textContent = AR(i + 1); li.children[1].textContent = m[0]; li.children[2].textContent = "الشاهد: " + m[1];
+      ol.appendChild(li);
+    });
+    document.getElementById("kvStage").textContent = d.label;
+    document.getElementById("kvPages").textContent = AR(d.total) + " صفحة";
+    Array.prototype.forEach.call(stagesEl.children, function (b) { b.setAttribute("aria-pressed", String(b.dataset.st === st)); });
+    var old = stage.querySelector(".leaf"); if (old) old.remove();
+    cur = 1; stage.insertBefore(leaf(1), stage.firstChild); renderMeta();
+    for (var p = 2; p <= Math.min(4, TOTAL()); p++) { var im = new Image(); im.src = src(p); }
+  }
+
+  ORDER.forEach(function (k) {
+    var d = DATA[k], b = document.createElement("button");
+    b.type = "button"; b.dataset.st = k;
+    b.innerHTML = "<b></b><small></small><em></em>";
+    b.children[0].textContent = d.label; b.children[1].textContent = d.sub; b.children[2].textContent = AR(d.total) + " صفحة · Word + PDF";
+    b.addEventListener("click", function () { if (st === k || busy) return; st = k; try { history.replaceState(null, "", "#" + k); } catch (e) {} buildStage(); });
+    stagesEl.appendChild(b);
+  });
+  buildStage();
+
+  ["next", "next2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(cur + 1); }); });
+  ["prev", "prev2"].forEach(function (id) { document.getElementById(id).addEventListener("click", function () { go(cur - 1); }); });
+  document.getElementById("zoomOpen").addEventListener("click", openZoom);
+  document.getElementById("zoomClose").addEventListener("click", closeZoom);
+  document.getElementById("zoomNext").addEventListener("click", function () { go(cur + 1); });
+  document.getElementById("zoomPrev").addEventListener("click", function () { go(cur - 1); });
+  document.getElementById("zoomImg").addEventListener("click", function () { zoom.classList.toggle("big"); });
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && !zoom.hidden) closeZoom();
+    if (e.key === "ArrowLeft") go(cur + 1);
+    if (e.key === "ArrowRight") go(cur - 1);
+  });
+  var x0 = null;
+  stage.addEventListener("pointerdown", function (e) { if (e.target.closest(".zoombtn")) return; x0 = e.clientX; });
+  stage.addEventListener("pointerup", function (e) { if (x0 === null) return; var dx = e.clientX - x0; x0 = null; if (dx > 40) go(cur + 1); else if (dx < -40) go(cur - 1); });
+  [stage, thumbs, zoom].forEach(function (el) { el.addEventListener("contextmenu", function (e) { e.preventDefault(); }); });
+  ["buy", "buy2"].forEach(function (id) { document.getElementById(id).href = STORE_URL; });
+})();
+</script>
+</body>
+</html>
